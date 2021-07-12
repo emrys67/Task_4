@@ -3,19 +3,19 @@ package com.foxminded.division;
 import java.util.StringJoiner;
 
 public class Formatter {
-    private final Calculator calculate;
+    private Calculator calculator;
 
-    public Formatter(Calculator calculate) {
-        this.calculate = calculate;
+    public Formatter(Calculator calculator) {
+        this.calculator = calculator;
     }
 
-    public String buildS(int dividend, int divider) {
+    public String buildString(int dividend, int divider) {
         StringJoiner out = new StringJoiner("\n");
-        String result = String.valueOf(calculate.getResult());
+        String result = String.valueOf(calculator.getResult());
         int dividendLength = String.valueOf(dividend).length();
         int divided = Integer.parseInt(Calculator.getStepList().get(0).getDivided());
         int division = Integer.parseInt(Calculator.getStepList().get(0).getDivision());
-        int offset = String.valueOf(division).length() - String.valueOf(division - divided).length();
+        int offset = String.valueOf(division).length()  - String.valueOf(divided).length() + 1;
         if (dividend < 0)
             offset++;
         out.add("_" + dividend + "|" + divider);
@@ -30,7 +30,7 @@ public class Formatter {
             divided = Integer.parseInt(Calculator.getStepList().get(i - 1).getDivided());
             division = Integer.parseInt(Calculator.getStepList().get(i - 1).getDivision());
             int difference = division - divided;
-            if (difference == 0)
+            if (difference == 0 && !Calculator.getStepList().get(i).isLast())
                 offset = offset + String.valueOf(division).length() - String.valueOf(difference).length() + 1;
             else
                 offset = offset + String.valueOf(divided).length() - String.valueOf(difference).length();
@@ -52,5 +52,9 @@ public class Formatter {
         for (var i = 0; i < times; i++)
             out = out + character;
         return out;
+    }
+
+    public void setCalculator(Calculator calculator) {
+        this.calculator = calculator;
     }
 }

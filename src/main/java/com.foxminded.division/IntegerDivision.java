@@ -12,7 +12,7 @@ public class IntegerDivision {
     }
     public String getDivision(int dividend, int divider){
         getCalculator().divide(dividend,divider);
-        return getFormatter().buildS(dividend, divider);
+        return getFormatter().buildString(dividend, divider);
     }
 
     private Formatter getFormatter() {
