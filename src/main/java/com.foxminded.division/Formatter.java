@@ -9,12 +9,14 @@ public class Formatter {
         String result = String.valueOf(dto.getResult());
         int dividendLength = String.valueOf(dto.getDividend()).length();
         int divided = dto.getDividend();
-        if(!dto.getStepList().get(0).isLast())
+        if(!dto.getStepList().get(0).isLast()) {
             divided = Integer.parseInt(dto.getStepList().get(0).getDivided());
+        }
         int division = Integer.parseInt(dto.getStepList().get(0).getDivision());
         int offset = String.valueOf(division).length()  - String.valueOf(divided).length() + 1;
-        if (dto.getDividend() < 0)
+        if (dto.getDividend() < 0) {
             offset++;
+        }
         out.add("_" + dto.getDividend() + "|" + dto.getDivider());
         out.add(addChar(offset, ' ') + divided + addChar(dividendLength - offset - String.valueOf(divided).length() + 1, ' ')
                 + "|" + addChar(Math.max(result.length(), String.valueOf(dto.getDivider()).length()), '-'));
