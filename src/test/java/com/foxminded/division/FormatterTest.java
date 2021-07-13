@@ -83,6 +83,34 @@ public class FormatterTest {
         assertTrue(actual.contains(expected));
     }
     @Test
+    void divideNegativeByNegative(){
+        String expected =
+                "_-150|-7\n" +
+                "  14 |--\n" +
+                "  -- |21\n" +
+                "   10\n" +
+                "    7\n" +
+                "    -\n" +
+                "    3";
+        calculator.divide(-150,-7);
+        String actual = formatter.buildString(-150,-7);
+        assertEquals(expected, actual);
+    }
+    @Test
+    void divideNegativeByInteger(){
+        String expected =
+                "_-150|7\n" +
+                "  14 |---\n" +
+                "  -- |-21\n" +
+                "   10\n" +
+                "    7\n" +
+                "    -\n" +
+                "    3";
+        calculator.divide(-150,7);
+        String actual = formatter.buildString(-150,7);
+        assertEquals(expected, actual);
+    }
+    @Test
     void addCharLetter(){
         assertEquals("hhhhh", formatter.addChar(5,'h'));
     }
