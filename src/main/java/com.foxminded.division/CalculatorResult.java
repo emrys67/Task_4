@@ -34,4 +34,5 @@ public class CalculatorResult {
     public void setStepList(ArrayList<Step> stepList) {
         this.stepList = stepList;
     }
+
 }

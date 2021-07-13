@@ -6,13 +6,15 @@ public class Step {
     private final boolean last;
 
 
-    public Step(String division, String divided){
+    public Step(String division, String divided) {
         this.divided = divided;
         this.division = division;
         last = false;
     }
-    public Step(String division){
+
+    public Step(String division) {
         this.division = division;
+        divided = "0";
         last = true;
     }
 
@@ -27,4 +29,5 @@ public class Step {
     public boolean isLast() {
         return last;
     }
+
 }

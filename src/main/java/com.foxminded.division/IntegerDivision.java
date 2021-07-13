@@ -9,8 +9,8 @@ public class IntegerDivision {
         this.calculator = calculate;
     }
 
-    public String getDivision(int dividend, int divider){
-        CalculatorResult dto = calculator.divide(dividend,divider);
+    public String getDivision(int dividend, int divider) {
+        CalculatorResult dto = calculator.divide(dividend, divider);
         return formatter.buildString(dto);
     }
 }
