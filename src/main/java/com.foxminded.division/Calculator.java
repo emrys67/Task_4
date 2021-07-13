@@ -20,11 +20,11 @@ public class Calculator {
         do{
                 if (dividendString.length() > 0)
                     dividend = Integer.parseInt(dividendString);
-                if (currentNumber < divider && dividend < divider && dividendString.length() < 1) {
+                if (currentNumber < divider && dividend < divider && dividendString.length() < 1) {   // Remainder of the last division is not 0
                     stepList.add(new Step(String.valueOf(currentNumber)));
                     currentNumber = 0;
                 } else if (currentNumber < divider) {
-                    if (currentNumber == 0 && dividendString.length() == 0) {
+                    if (currentNumber == 0 && dividendString.length() == 0) {                    // Remainder of the last division is 0
                         stepList.add(new Step("0"));
                         break;
                     }

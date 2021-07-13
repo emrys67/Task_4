@@ -53,6 +53,17 @@ public class FormatterTest {
         assertEquals(expected, actual);
     }
     @Test
+    void dividerEqualsToDivided(){
+        String expected =
+                "_165|165\n" +
+                " 165|---\n" +
+                " ---|1\n" +
+                "   0";
+        calculator.divide(165,165);
+        String actual = formatter.buildString(165,165);
+        assertEquals(expected, actual);
+    }
+    @Test
     void divideIntegerByZero(){
         String expected = "Divided by 0";
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
