@@ -13,7 +13,11 @@ public class Formatter {
         StringJoiner out = new StringJoiner("\n");
         String result = String.valueOf(calculator.getResult());
         int dividendLength = String.valueOf(dividend).length();
-        int divided = Integer.parseInt(Calculator.getStepList().get(0).getDivided());
+        int divided;
+        if(Calculator.getStepList().get(0).isLast())
+            divided = dividend;
+        else
+            divided = Integer.parseInt(Calculator.getStepList().get(0).getDivided());
         int division = Integer.parseInt(Calculator.getStepList().get(0).getDivision());
         int offset = String.valueOf(division).length()  - String.valueOf(divided).length() + 1;
         if (dividend < 0)
