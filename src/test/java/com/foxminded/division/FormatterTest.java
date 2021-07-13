@@ -11,7 +11,7 @@ public class FormatterTest {
     @BeforeEach
     void setUp(){
         calculator = new Calculator();
-        formatter = new Formatter(calculator);
+        formatter = new Formatter();
     }
     @Test
     void divideIntegerByOne(){
@@ -23,8 +23,7 @@ public class FormatterTest {
                 "  3\n" +
                 "  -\n" +
                 "  0";
-        calculator.divide(53,1);
-        String actual = formatter.buildString(53,1);
+        String actual = formatter.buildString(calculator.divide(53,1));
         assertEquals(expected, actual);
     }
     @Test
@@ -34,8 +33,7 @@ public class FormatterTest {
                 "  70|--\n" +
                 "  --|-7\n" +
                 "   8";
-        calculator.divide(-78,10);
-        String actual = formatter.buildString(-78,10);
+        String actual = formatter.buildString(calculator.divide(-78,10));
         assertEquals(expected, actual);
     }
     @Test
@@ -48,8 +46,7 @@ public class FormatterTest {
                 "  15\n" +
                 "  --\n" +
                 "   0";
-        calculator.divide(165,-5);
-        String actual = formatter.buildString(165,-5);
+        String actual = formatter.buildString(calculator.divide(165,-5));
         assertEquals(expected, actual);
     }
     @Test
@@ -59,8 +56,7 @@ public class FormatterTest {
                 " 165|---\n" +
                 " ---|1\n" +
                 "   0";
-        calculator.divide(165,165);
-        String actual = formatter.buildString(165,165);
+        String actual = formatter.buildString(calculator.divide(165,165));
         assertEquals(expected, actual);
     }
     @Test
@@ -69,8 +65,7 @@ public class FormatterTest {
                 "_0|165\n" +
                 " 0|---\n" +
                 " -|0";
-        calculator.divide(0,165);
-        String actual = formatter.buildString(0,165);
+        String actual = formatter.buildString(calculator.divide(0,165));
         assertEquals(expected, actual);
     }
     @Test
@@ -92,8 +87,7 @@ public class FormatterTest {
                 "    7\n" +
                 "    -\n" +
                 "    3";
-        calculator.divide(-150,-7);
-        String actual = formatter.buildString(-150,-7);
+        String actual = formatter.buildString(calculator.divide(-150,-7));
         assertEquals(expected, actual);
     }
     @Test
@@ -106,8 +100,7 @@ public class FormatterTest {
                 "    7\n" +
                 "    -\n" +
                 "    3";
-        calculator.divide(-150,7);
-        String actual = formatter.buildString(-150,7);
+        String actual = formatter.buildString(calculator.divide(-150,7));
         assertEquals(expected, actual);
     }
     @Test

@@ -2,6 +2,9 @@ package com.foxminded.division;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(IntegerDivision.getInstance().getDivision(0,53));
+        Calculator calculator = new Calculator();
+        Formatter formatter = new Formatter();
+        IntegerDivision integerDivision = new IntegerDivision(formatter, calculator);
+        System.out.println(integerDivision.getDivision(50,13));
     }
 }
