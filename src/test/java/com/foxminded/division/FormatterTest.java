@@ -61,4 +61,20 @@ public class FormatterTest {
         String actual = exception.getMessage();
         assertTrue(actual.contains(expected));
     }
+    @Test
+    void addCharLetter(){
+        assertEquals("hhhhh", formatter.addChar(5,'h'));
+    }
+    @Test
+    void addCharDigit(){
+        assertEquals("33333", formatter.addChar(5,'3'));
+    }
+    @Test
+    void addCharSymbol(){
+        assertEquals("#####", formatter.addChar(5,'#'));
+    }
+    @Test
+    void addCharZeroTimes(){
+        assertEquals("", formatter.addChar(0,'h'));
+    }
 }
