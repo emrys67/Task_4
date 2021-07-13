@@ -64,7 +64,7 @@ public class FormatterTest {
         assertEquals(expected, actual);
     }
     @Test
-    void DivideZeroByInteger(){
+    void divideZeroByInteger(){
         String expected =
                 "_0|165\n" +
                 " 0|---\n" +
