@@ -25,8 +25,7 @@ public class CalculatorTest {
         stepList.add(new Step(String.valueOf(3), String.valueOf(3)));
         stepList.add(new Step(String.valueOf(0)));
         calculatorResult.setStepList(stepList);
-        CalculatorResult expected = calculatorResult;
-        assertTrue(expected.equals(actual));
+        assertEquals(calculatorResult, actual);
     }
 
     @Test
@@ -37,8 +36,7 @@ public class CalculatorTest {
         stepList.add(new Step(String.valueOf(78), String.valueOf(70)));
         stepList.add(new Step(String.valueOf(8)));
         calculatorResult.setStepList(stepList);
-        CalculatorResult expected = calculatorResult;
-        assertTrue(expected.equals(actual));
+        assertEquals(calculatorResult, actual);
     }
 
     @Test
@@ -50,8 +48,7 @@ public class CalculatorTest {
         stepList.add(new Step(String.valueOf(15), String.valueOf(15)));
         stepList.add(new Step(String.valueOf(0)));
         calculatorResult.setStepList(stepList);
-        CalculatorResult expected = calculatorResult;
-        assertTrue(expected.equals(actual));
+        assertEquals(calculatorResult, actual);
     }
 
     @Test
@@ -62,8 +59,7 @@ public class CalculatorTest {
         stepList.add(new Step(String.valueOf(165), String.valueOf(165)));
         stepList.add(new Step(String.valueOf(0)));
         calculatorResult.setStepList(stepList);
-        CalculatorResult expected = calculatorResult;
-        assertTrue(expected.equals(actual));
+        assertEquals(calculatorResult, actual);
     }
 
     @Test
@@ -73,8 +69,7 @@ public class CalculatorTest {
         ArrayList<Step> stepList = new ArrayList<>();
         stepList.add(new Step(String.valueOf(0)));
         calculatorResult.setStepList(stepList);
-        CalculatorResult expected = calculatorResult;
-        assertTrue(expected.equals(actual));
+        assertEquals(calculatorResult, actual);
     }
 
     @Test
@@ -96,8 +91,7 @@ public class CalculatorTest {
         stepList.add(new Step(String.valueOf(10), String.valueOf(7)));
         stepList.add(new Step(String.valueOf(3)));
         calculatorResult.setStepList(stepList);
-        CalculatorResult expected = calculatorResult;
-        assertTrue(expected.equals(actual));
+        assertEquals(calculatorResult, actual);
     }
 
     @Test
@@ -109,8 +103,7 @@ public class CalculatorTest {
         stepList.add(new Step(String.valueOf(10), String.valueOf(7)));
         stepList.add(new Step(String.valueOf(3)));
         calculatorResult.setStepList(stepList);
-        CalculatorResult expected = calculatorResult;
-        assertTrue(expected.equals(actual));
+        assertEquals(calculatorResult, actual);
     }
 
 }
