@@ -1,6 +1,7 @@
 package com.foxminded.division;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class CalculatorResult {
     private final int dividend;
@@ -35,4 +36,16 @@ public class CalculatorResult {
         this.stepList = stepList;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CalculatorResult that = (CalculatorResult) o;
+        return dividend == that.dividend && divider == that.divider && result == that.result && stepList.equals(that.stepList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dividend, divider, result, stepList);
+    }
 }

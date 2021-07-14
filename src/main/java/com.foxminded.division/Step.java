@@ -1,5 +1,7 @@
 package com.foxminded.division;
 
+import java.util.Objects;
+
 public class Step {
     private String divided;
     private final String division;
@@ -37,5 +39,18 @@ public class Step {
                 ", division='" + division + '\'' +
                 ", last=" + last +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Step step = (Step) o;
+        return last == step.last && divided.equals(step.divided) && division.equals(step.division);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(divided, division, last);
     }
 }

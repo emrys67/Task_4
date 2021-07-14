@@ -19,62 +19,62 @@ public class CalculatorTest {
     @Test
     void divideIntegerByOne() {
         CalculatorResult calculatorResult = new CalculatorResult(53, 1, 53);
-        String actual = calculator.divide(53, 1).getStepList().toString();
+        CalculatorResult actual = calculator.divide(53, 1);
         ArrayList<Step> stepList = new ArrayList<>();
         stepList.add(new Step(String.valueOf(5), String.valueOf(5)));
         stepList.add(new Step(String.valueOf(3), String.valueOf(3)));
         stepList.add(new Step(String.valueOf(0)));
         calculatorResult.setStepList(stepList);
-        String expected = calculatorResult.getStepList().toString();
-        assertEquals(expected, actual);
+        CalculatorResult expected = calculatorResult;
+        assertTrue(expected.equals(actual));
     }
 
     @Test
     void divideNegativeInteger() {
         CalculatorResult calculatorResult = new CalculatorResult(-78, 10, -7);
-        String actual = calculator.divide(-78, 10).getStepList().toString();
+        CalculatorResult actual = calculator.divide(-78, 10);
         ArrayList<Step> stepList = new ArrayList<>();
         stepList.add(new Step(String.valueOf(78), String.valueOf(70)));
         stepList.add(new Step(String.valueOf(8)));
         calculatorResult.setStepList(stepList);
-        String expected = calculatorResult.getStepList().toString();
-        assertEquals(expected, actual);
+        CalculatorResult expected = calculatorResult;
+        assertTrue(expected.equals(actual));
     }
 
     @Test
     void divideIntegerByNegative() {
         CalculatorResult calculatorResult = new CalculatorResult(165, -5, -33);
-        String actual = calculator.divide(165, -5).getStepList().toString();
+        CalculatorResult actual = calculator.divide(165, -5);
         ArrayList<Step> stepList = new ArrayList<>();
         stepList.add(new Step(String.valueOf(16), String.valueOf(15)));
         stepList.add(new Step(String.valueOf(15), String.valueOf(15)));
         stepList.add(new Step(String.valueOf(0)));
         calculatorResult.setStepList(stepList);
-        String expected = calculatorResult.getStepList().toString();
-        assertEquals(expected, actual);
+        CalculatorResult expected = calculatorResult;
+        assertTrue(expected.equals(actual));
     }
 
     @Test
     void dividerEqualsToDivided() {
         CalculatorResult calculatorResult = new CalculatorResult(165, 165, 1);
-        String actual = calculator.divide(165, 165).getStepList().toString();
+        CalculatorResult actual = calculator.divide(165, 165);
         ArrayList<Step> stepList = new ArrayList<>();
         stepList.add(new Step(String.valueOf(165), String.valueOf(165)));
         stepList.add(new Step(String.valueOf(0)));
         calculatorResult.setStepList(stepList);
-        String expected = calculatorResult.getStepList().toString();
-        assertEquals(expected, actual);
+        CalculatorResult expected = calculatorResult;
+        assertTrue(expected.equals(actual));
     }
 
     @Test
     void divideZeroByInteger() {
         CalculatorResult calculatorResult = new CalculatorResult(0, 165, 0);
-        String actual = calculator.divide(0, 165).getStepList().toString();
+        CalculatorResult actual = calculator.divide(0, 165);
         ArrayList<Step> stepList = new ArrayList<>();
         stepList.add(new Step(String.valueOf(0)));
         calculatorResult.setStepList(stepList);
-        String expected = calculatorResult.getStepList().toString();
-        assertEquals(expected, actual);
+        CalculatorResult expected = calculatorResult;
+        assertTrue(expected.equals(actual));
     }
 
     @Test
@@ -90,27 +90,27 @@ public class CalculatorTest {
     @Test
     void divideNegativeByNegative() {
         CalculatorResult calculatorResult = new CalculatorResult(-150, -7, 21);
-        String actual = calculator.divide(-150, -7).getStepList().toString();
+        CalculatorResult actual = calculator.divide(-150, -7);
         ArrayList<Step> stepList = new ArrayList<>();
         stepList.add(new Step(String.valueOf(15), String.valueOf(14)));
         stepList.add(new Step(String.valueOf(10), String.valueOf(7)));
         stepList.add(new Step(String.valueOf(3)));
         calculatorResult.setStepList(stepList);
-        String expected = calculatorResult.getStepList().toString();
-        assertEquals(expected, actual);
+        CalculatorResult expected = calculatorResult;
+        assertTrue(expected.equals(actual));
     }
 
     @Test
     void divideNegativeByInteger() {
         CalculatorResult calculatorResult = new CalculatorResult(-150, 7, -21);
-        String actual = calculator.divide(-150, 7).getStepList().toString();
+        CalculatorResult actual = calculator.divide(-150, 7);
         ArrayList<Step> stepList = new ArrayList<>();
         stepList.add(new Step(String.valueOf(15), String.valueOf(14)));
         stepList.add(new Step(String.valueOf(10), String.valueOf(7)));
         stepList.add(new Step(String.valueOf(3)));
         calculatorResult.setStepList(stepList);
-        String expected = calculatorResult.getStepList().toString();
-        assertEquals(expected, actual);
+        CalculatorResult expected = calculatorResult;
+        assertTrue(expected.equals(actual));
     }
 
 }
