@@ -13,9 +13,9 @@ public class IntegerDivisionTest {
 
     private CalculatorResult calculatorResult;
     @Mock
-    Calculator calculator;
+    private Calculator calculator;
     @Mock
-    Formatter formatter;
+    private Formatter formatter;
 
     @BeforeEach
     void setUp() {
