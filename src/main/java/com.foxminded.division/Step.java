@@ -30,4 +30,12 @@ public class Step {
         return last;
     }
 
+    @Override
+    public String toString() {
+        return "Step{" +
+                "divided='" + divided + '\'' +
+                ", division='" + division + '\'' +
+                ", last=" + last +
+                '}';
+    }
 }
