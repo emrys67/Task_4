@@ -21,9 +21,9 @@ public class CalculatorTest {
         CalculatorResult calculatorResult = new CalculatorResult(53, 1, 53);
         CalculatorResult actual = calculator.divide(53, 1);
         ArrayList<Step> stepList = new ArrayList<>();
-        stepList.add(new Step(String.valueOf(5), String.valueOf(5)));
-        stepList.add(new Step(String.valueOf(3), String.valueOf(3)));
-        stepList.add(new Step(String.valueOf(0)));
+        stepList.add(new Step(5, 5));
+        stepList.add(new Step(3, 3));
+        stepList.add(new Step(0));
         calculatorResult.setStepList(stepList);
         assertEquals(calculatorResult, actual);
     }
@@ -33,8 +33,8 @@ public class CalculatorTest {
         CalculatorResult calculatorResult = new CalculatorResult(-78, 10, -7);
         CalculatorResult actual = calculator.divide(-78, 10);
         ArrayList<Step> stepList = new ArrayList<>();
-        stepList.add(new Step(String.valueOf(78), String.valueOf(70)));
-        stepList.add(new Step(String.valueOf(8)));
+        stepList.add(new Step(78, 70));
+        stepList.add(new Step(8));
         calculatorResult.setStepList(stepList);
         assertEquals(calculatorResult, actual);
     }
@@ -44,9 +44,9 @@ public class CalculatorTest {
         CalculatorResult calculatorResult = new CalculatorResult(165, -5, -33);
         CalculatorResult actual = calculator.divide(165, -5);
         ArrayList<Step> stepList = new ArrayList<>();
-        stepList.add(new Step(String.valueOf(16), String.valueOf(15)));
-        stepList.add(new Step(String.valueOf(15), String.valueOf(15)));
-        stepList.add(new Step(String.valueOf(0)));
+        stepList.add(new Step(16, 15));
+        stepList.add(new Step(15, 15));
+        stepList.add(new Step(0));
         calculatorResult.setStepList(stepList);
         assertEquals(calculatorResult, actual);
     }
@@ -56,8 +56,8 @@ public class CalculatorTest {
         CalculatorResult calculatorResult = new CalculatorResult(165, 165, 1);
         CalculatorResult actual = calculator.divide(165, 165);
         ArrayList<Step> stepList = new ArrayList<>();
-        stepList.add(new Step(String.valueOf(165), String.valueOf(165)));
-        stepList.add(new Step(String.valueOf(0)));
+        stepList.add(new Step(165, 165));
+        stepList.add(new Step(0));
         calculatorResult.setStepList(stepList);
         assertEquals(calculatorResult, actual);
     }
@@ -67,7 +67,7 @@ public class CalculatorTest {
         CalculatorResult calculatorResult = new CalculatorResult(0, 165, 0);
         CalculatorResult actual = calculator.divide(0, 165);
         ArrayList<Step> stepList = new ArrayList<>();
-        stepList.add(new Step(String.valueOf(0)));
+        stepList.add(new Step(0));
         calculatorResult.setStepList(stepList);
         assertEquals(calculatorResult, actual);
     }
@@ -87,9 +87,9 @@ public class CalculatorTest {
         CalculatorResult calculatorResult = new CalculatorResult(-150, -7, 21);
         CalculatorResult actual = calculator.divide(-150, -7);
         ArrayList<Step> stepList = new ArrayList<>();
-        stepList.add(new Step(String.valueOf(15), String.valueOf(14)));
-        stepList.add(new Step(String.valueOf(10), String.valueOf(7)));
-        stepList.add(new Step(String.valueOf(3)));
+        stepList.add(new Step(15, 14));
+        stepList.add(new Step(10, 7));
+        stepList.add(new Step(3));
         calculatorResult.setStepList(stepList);
         assertEquals(calculatorResult, actual);
     }
@@ -99,9 +99,9 @@ public class CalculatorTest {
         CalculatorResult calculatorResult = new CalculatorResult(-150, 7, -21);
         CalculatorResult actual = calculator.divide(-150, 7);
         ArrayList<Step> stepList = new ArrayList<>();
-        stepList.add(new Step(String.valueOf(15), String.valueOf(14)));
-        stepList.add(new Step(String.valueOf(10), String.valueOf(7)));
-        stepList.add(new Step(String.valueOf(3)));
+        stepList.add(new Step(15, 14));
+        stepList.add(new Step(10, 7));
+        stepList.add(new Step(3));
         calculatorResult.setStepList(stepList);
         assertEquals(calculatorResult, actual);
     }

@@ -9,7 +9,6 @@ public class CalculatorResult {
     private final int result;
     private ArrayList<Step> stepList;
 
-
     public CalculatorResult(int dividend, int divider, int result) {
         this.dividend = dividend;
         this.divider = divider;

@@ -21,11 +21,11 @@ public class Calculator {
                     currentNumber = currentNumber * 10 + getLeftDigit(dividendString);
                     dividendString = destroyLeftDigit(dividendString);
                 } else {
-                    stepList.add(new Step(String.valueOf(currentNumber)));
+                    stepList.add(new Step(currentNumber));
                     currentNumber = 0;
                 }
             } else {
-                stepList.add(new Step(String.valueOf(currentNumber), String.valueOf(currentNumber - currentNumber % divider)));
+                stepList.add(new Step(currentNumber, currentNumber - currentNumber % divider));
                 currentNumber = currentNumber % divider;
             }
         } while (dividendString.length() > 0 || currentNumber > 0 || !stepList.get(stepList.size() - 1).isLast());

@@ -5,6 +5,6 @@ public class Main {
         Calculator calculator = new Calculator();
         Formatter formatter = new Formatter();
         IntegerDivision integerDivision = new IntegerDivision(formatter, calculator);
-        System.out.println(integerDivision.getDivision(846554, 165));
+        System.out.println(integerDivision.getDivision(31541, 165));
     }
 }
